@@ -36,7 +36,7 @@ exports.create = (req, res) => {
 
 exports.getJuegoById = (req, res) => {
     let juegoId = req.params.id;
-    Libro.findByPk(libroId)
+    Juego.findByPk(juegoId)
         .then(juego => {
             res.status(200).json({
                 message: "juego obtenido exitosamente con id = " + juegoId,

@@ -12,12 +12,12 @@ const sequelize = new Sequelize(env.database, env.username, env.password, {
   },
   //operatorsAliases: false,
  
-  pool: {
-    max: env.max,
+ pool: {
+    max: env.pool.max,      // ← corrige esto
     min: env.pool.min,
     acquire: env.pool.acquire,
     idle: env.pool.idle,
-  }
+}
 });
 
 const db = {};
